@@ -13,6 +13,13 @@ test('renders hi there', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('renders paragraph', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/paragraph/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
 test('does not render bye there', () => {
   render(<App />);
   const linkElement = screen.queryByText(/bye there/i);
