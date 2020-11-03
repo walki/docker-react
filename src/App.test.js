@@ -13,9 +13,9 @@ test('renders hi there', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('renders learn react link 3', () => {
+test('does not render bye there', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElement = screen.queryByText(/bye there/i);
+  expect(linkElement).toBeNull();
 });
 
